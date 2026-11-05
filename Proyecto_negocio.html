@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi página web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Menú superior fijo */
+        nav {
+            background-color: #222;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        /* Apartados uno al lado del otro */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+        }
+
+        /* Efecto al pasar el mouse */
+        nav ul li a:hover {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        /* Inicio */
+        main {
+            padding: 120px 40px 40px;
+            text-align: center;
+        }
+
+        /* Secciones */
+        section {
+            padding: 60px 40px;
+            text-align: center;
+            min-height: 400px;
+            scroll-margin-top: 80px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Tabla de productos */
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Diseño para celulares */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 5px;
+                flex-wrap: wrap;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            main {
+                padding: 120px 15px 30px;
+            }
+
+            section {
+                padding: 40px 15px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos y precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de inicio -->
+    <main id="inicio">
+        <h1>Bienvenido a mi página web</h1>
+        <p>Conoce nuestros productos y precios.</p>
+    </main>
+
+    <!-- Sección de productos -->
+    <section id="productos">
+        <h2>Productos y precios</h2>
+
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+
+            <tr>
+                <td>Producto 1</td>
+                <td>Descripción del producto</td>
+                <td>$50</td>
+            </tr>
+
+            <tr>
+                <td>Producto 2</td>
+                <td>Descripción del producto</td>
+                <td>$75</td>
+            </tr>
+
+            <tr>
+                <td>Producto 3</td>
+                <td>Descripción del producto</td>
+                <td>$100</td>
+            </tr>
+
+            <tr>
+                <td>Producto 4</td>
+                <td>Descripción del producto</td>
+                <td>$120</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Correo: ejemplo@gmail.com</p>
+        <p>Teléfono: 555-123-4567</p>
+    </section>
+
+</body>
+</html>
